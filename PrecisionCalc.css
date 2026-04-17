@@ -89,10 +89,10 @@
       box-shadow: 0 2px 0 #0f1219;
     }
 
-    /* special operator styling */
+    
     .operator {
       background: #2c3e4e;
-      color: #ffd966;
+      color: #ffd966:
       font-size: 1.9rem;
       font-weight: 700;
     }
