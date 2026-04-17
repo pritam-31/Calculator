@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>PrecisionCalc | Modern Calculator</title>
+  <link rel="stylesheet" href="PrecisionCalc.css">
+</head>
+<body>
+<div class="calculator">
+  <!-- Display screen: shows user input and results -->
+  <div class="display-screen">
+    <div class="previous-operand" id="previousOperand">0</div>
+    <div class="current-operand" id="currentOperand">0</div>
+  </div>
+
+  <!-- Buttons aligned with CSS Grid -->
+  <div class="buttons-grid">
+    <!-- Row 1: AC, DEL, %, / -->
+    <button class="btn clear" data-action="clear">AC</button>
+    <button class="btn delete" data-action="delete">⌫</button>
+    <button class="btn operator" data-operator="%">%</button>
+    <button class="btn operator" data-operator="/">÷</button>
+
+    <!-- Row 2: 7 8 9 * -->
+    <button class="btn number" data-number="7">7</button>
+    <button class="btn number" data-number="8">8</button>
+    <button class="btn number" data-number="9">9</button>
+    <button class="btn operator" data-operator="*">×</button>
+
+    <!-- Row 3: 4 5 6 - -->
+    <button class="btn number" data-number="4">4</button>
+    <button class="btn number" data-number="5">5</button>
+    <button class="btn number" data-number="6">6</button>
+    <button class="btn operator" data-operator="-">−</button>
+
+    <!-- Row 4: 1 2 3 + -->
+    <button class="btn number" data-number="1">1</button>
+    <button class="btn number" data-number="2">2</button>
+    <button class="btn number" data-number="3">3</button>
+    <button class="btn operator" data-operator="+">+</button>
+
+    <!-- Row 5: 0 . and = (zero spans two columns for better ergonomics) -->
+    <button class="btn number span-two" data-number="0">0</button>
+    <button class="btn number dot" data-action="dot">.</button>
+    <button class="btn equals" data-action="equals">=</button>
+  </div>
+  <footer>© PrecisionCalc | basic math & operations</footer>
+</div>
+</body>
+<script src="PrecisionCalc.js"></script>
+</html>

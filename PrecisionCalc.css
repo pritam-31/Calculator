@@ -1,0 +1,165 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none; /* avoid accidental selection while tapping */
+    }
+
+    body {
+      background: linear-gradient(145deg, #1e2a3a 0%, #0f1724 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, 'Poppins', monospace;
+      padding: 1.5rem;
+    }
+
+    /* Main calculator card */
+    .calculator {
+      max-width: 480px;
+      width: 100%;
+      background: rgba(22, 28, 36, 0.85);
+      backdrop-filter: blur(2px);
+      border-radius: 3.5rem;
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      padding: 1.8rem;
+      transition: all 0.2s ease;
+    }
+
+    /* Display screen */
+    .display-screen {
+      background: #0a0e14;
+      border-radius: 2rem;
+      padding: 1.2rem 1.8rem;
+      margin-bottom: 2rem;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 3px rgba(255, 255, 255, 0.05);
+      text-align: right;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+    .previous-operand {
+      min-height: 1.8rem;
+      font-size: 1.2rem;
+      color: #8d9db0;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      font-family: 'Courier New', monospace;
+    }
+
+    .current-operand {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #f0f3f8;
+      line-height: 1.2;
+      margin-top: 0.3rem;
+      font-family: 'Segoe UI', 'Courier New', monospace;
+      letter-spacing: 1px;
+    }
+
+    /* Grid system for buttons alignment */
+    .buttons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.9rem;
+    }
+
+    /* universal button style */
+    .btn {
+      background: #1e2a32;
+      border: none;
+      padding: 1.1rem 0;
+      border-radius: 2rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      font-family: inherit;
+      color: #eef4ff;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      box-shadow: 0 5px 0 #0f1219;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 #0f1219;
+    }
+
+    /* special operator styling */
+    .operator {
+      background: #2c3e4e;
+      color: #ffd966;
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    .equals {
+      background: #e67e22;
+      color: white;
+      box-shadow: 0 5px 0 #b45f1b;
+      font-size: 1.9rem;
+    }
+
+    .clear {
+      background: #6d2e46;
+      color: #ffbfbf;
+      font-weight: bold;
+    }
+
+    .delete {
+      background: #3a2c3a;
+      color: #f5bcb0;
+      font-size: 1.4rem;
+    }
+
+    .dot, .number {
+      background: #18232c;
+    }
+
+    .number {
+      font-weight: 600;
+    }
+
+    /* zero spans two columns? optional but for comfort: not needed but I can style better */
+    .span-two {
+      grid-column: span 2;
+    }
+
+    /* responsive fine tuning */
+    @media (max-width: 480px) {
+      .calculator {
+        padding: 1.2rem;
+      }
+      .btn {
+        padding: 0.9rem 0;
+        font-size: 1.4rem;
+      }
+      .current-operand {
+        font-size: 2.4rem;
+      }
+      .buttons-grid {
+        gap: 0.7rem;
+      }
+    }
+
+    /* subtle hover effect for desktop */
+    @media (hover: hover) {
+      .btn:hover {
+        filter: brightness(1.08);
+        transform: scale(0.98);
+      }
+      .btn:active {
+        transform: translateY(3px);
+      }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      color: #5f7285;
+    }
